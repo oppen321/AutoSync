@@ -19,11 +19,11 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id || ! github.event.sender.id
     runs-on: ubuntu-latest
 
-    name: Update small
+    name: Update Helloword
     strategy:
       fail-fast: false
       matrix:
-        target: [master]
+        target: [main]
         
     steps:
     - name: Checkout
