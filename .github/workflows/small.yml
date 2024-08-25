@@ -1,5 +1,4 @@
-name: small
-
+name: Helloword
 on:
   push:
     paths:
@@ -34,7 +33,7 @@ jobs:
 
     - name: Initialization environment
       run : |
-        git config --global user.email "kenzok8@users.noreply.github.com"
+        git config --global user.email "oppen321@users.noreply.github.com"
         git config --global user.name "actions-user"
         sudo timedatectl set-timezone "Asia/Shanghai"
         
@@ -42,7 +41,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE
         chmod +x .github/diy/small.sh
-        git clone -b master https://github.com/kenzok8/small.git ${{matrix.target}}
+        git clone -b main https://github.com/oppen321/Helloword.git ${{matrix.target}}
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
         rm -rf `find ./* -maxdepth 0 -type d ! -name "commit"` >/dev/null 2>&1
