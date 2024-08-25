@@ -2,8 +2,8 @@ name: Helloword
 on:
   push:
     paths:
-      - '.github/workflows/small.yml'
-      - 'small.sh'
+      - '.github/workflows/Helloword.yml'
+      - 'Helloword.sh'
   schedule:
     - cron: 0 */4 * * *
   repository_dispatch:
