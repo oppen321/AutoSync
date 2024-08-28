@@ -16,11 +16,11 @@ on:
         default: 'false'	
 
 jobs:
-  job_litte:
+  job_Test-plug-in:
     if: github.event.repository.owner.id == github.event.sender.id || ! github.event.sender.id
     runs-on: ubuntu-latest
 
-    name: Update litte
+    name: Update Test-plug-in
     strategy:
       fail-fast: false
       matrix:
@@ -42,7 +42,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE
         chmod +x .github/diy/${{matrix.target}}.sh
-        git clone -b master https://github.com/kenzok8/litte.git ${{matrix.target}}
+        git clone -b master https://github.com/oppen321/Test-plug-in.git ${{matrix.target}}
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
         rm -rf `find ./* -maxdepth 0 -type d ! -name "commit"` >/dev/null 2>&1     
