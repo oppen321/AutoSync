@@ -54,8 +54,8 @@ git clone --depth 1 https://github.com/sbwml/luci-app-alist openwrt-alist && mv 
 git clone --depth 1 -b lua https://github.com/sbwml/luci-app-alist openwrt-alist1 && mv -n openwrt-alist1/luci-app-alist ./ ; rm -rf openwrt-alist1
 git clone --depth 1 https://github.com/lisaac/luci-app-dockerman dockerman && mv -n dockerman/applications/* ./; rm -rf dockerman
 git clone --depth 1 https://github.com/vernesong/OpenClash && mv -n OpenClash/luci-app-openclash ./; rm -rf OpenClash
-git clone --depth 1 https://github.com/oppen321/Test-plug-in && mv -n Test-plug-in/luci-theme-atmaterial_new Test-plug-in/luci-theme-tomato ./ ; rm -rf litte
-git clone --depth 1 https://github.com/oppen321/Moll && mv -n Moll/UnblockNeteaseMusic Moll/ddns-go Moll/gost Moll/smartdns Moll/adguardhome Moll/filebrowser ./ ; rm -rf wall
+git clone --depth 1 https://github.com/oppen321/Test-plug-in && mv -n Test-plug-in/luci-theme-atmaterial_new Test-plug-in/luci-theme-tomato ./ ; rm -rf Test-plug-in
+git clone --depth 1 https://github.com/oppen321/Moll && mv -n Moll/UnblockNeteaseMusic Moll/ddns-go Moll/gost Moll/smartdns Moll/adguardhome Moll/filebrowser ./ ; rm -rf Moll
 #svn export https://github.com/coolsnowwolf/luci/trunk/libs/luci-lib-ipkg
 git clone --depth 1 https://github.com/oppen321/Moll && mv -n Moll/* ./ ; rm -rf Moll
 #git clone --depth 1 https://github.com/jerrykuku/luci-app-vssr
