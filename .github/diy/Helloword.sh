@@ -25,6 +25,7 @@ git clone --depth 1 https://github.com/immortalwrt/homeproxy luci-app-homeproxy
 #git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages passwall-packages && mv -n passwall-packages/{sing-box,shadowsocks-rust} ./; rm -rf passwall-packages
 #svn export https://github.com/immortalwrt/packages/trunk/devel/gn
 git clone --depth 1 https://github.com/kiddin9/openwrt-packages && mv -n openwrt-packages/luci-app-bypass ./ ; rm -rf openwrt-packages
+git clone --depth 1 https://github.com/morytyann/OpenWrt-mihomo OpenWrt-mihomo && mv -n OpenWrt-mihomo/luci-app-mihomo ./ ; rm -rf OpenWrt-mihomo
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
