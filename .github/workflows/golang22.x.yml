@@ -1,4 +1,4 @@
-name: go23.x
+name: go22.x
 on:
   push:
     paths:
@@ -15,11 +15,11 @@ on:
         default: 'false'	
 
 jobs:
-  job_argon:
+  job_golang:
     if: github.event.repository.owner.id == github.event.sender.id || ! github.event.sender.id
     runs-on: ubuntu-latest
 
-    name: Update HD-tproxy
+    name: Update golong
     strategy:
       fail-fast: false
       matrix:
