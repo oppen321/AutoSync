@@ -14,9 +14,12 @@ function mvdir() {
 mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
-git clone --depth 1 https://github.com/sbwml/luci-theme-argon argon && mv -n argon/luci-theme-argon ./ ; rm -rf argon
-git clone --depth 1 https://github.com/sbwml/luci-theme-argon argon && mv -n argon/luci-app-argon-config ./ ; rm -rf argon
-git clone --depth 1 -b js https://github.com/sirpdboy/luci-theme-kucat 
+git clone --depth 1 -b main https://github.com/linkease/istore-packages
+git clone --depth 1 -b dev https://github.com/jjm2473/luci-app-diskman
+git clone --depth 1 -b dev4 https://github.com/jjm2473/OpenAppFilter 
+git clone --depth 1 -b master https://github.com/linkease/nas-packages
+git clone --depth 1 -b main https://github.com/linkease/nas-packages-luci
+git clone --depth 1 -b main https://github.com/jjm2473/openwrt-apps
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
