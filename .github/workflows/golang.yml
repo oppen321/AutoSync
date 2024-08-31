@@ -1,9 +1,9 @@
-name: go23.x
+name: golang
 on:
   push:
     paths:
-      - '.github/workflows/golang23.x.yml'
-      - 'golang-23.x.sh'
+      - '.github/workflows/golang.yml'
+      - 'golang.sh'
   schedule:
     - cron: 0 */5 * * *
   repository_dispatch:
@@ -15,15 +15,15 @@ on:
         default: 'false'	
 
 jobs:
-  job_argon:
+  job_golang:
     if: github.event.repository.owner.id == github.event.sender.id || ! github.event.sender.id
     runs-on: ubuntu-latest
 
-    name: Update HD-tproxy
+    name: Update golang
     strategy:
       fail-fast: false
       matrix:
-        target: [23.x]
+        target: [main]
         
     steps:
     - name: Checkout
@@ -40,12 +40,12 @@ jobs:
     - name: Clone packages
       run: |
         cd $GITHUB_WORKSPACE
-        chmod +x .github/diy/golang-23.x.sh
+        chmod +x .github/diy/golang.sh
         git clone -b main https://github.com/oppen321/golang.git ${{matrix.target}}
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
         rm -rf `find ./* -maxdepth 0 -type d ! -name "commit"` >/dev/null 2>&1
-        $GITHUB_WORKSPACE/.github/diy/golang-23.x.sh
+        $GITHUB_WORKSPACE/.github/diy/golang.sh
 
     - name: Upload
       env: 
@@ -55,7 +55,7 @@ jobs:
         if git status --porcelain | grep .; then
           git add .
           git commit -am "update $(date '+%Y-%m-%d %H:%M:%S')"
-          git push --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/oppen321/golamg.git" HEAD:23.x
+          git push --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/oppen321/golamg.git" HEAD:main
         else
           echo "nothing to commit"
           exit 0
