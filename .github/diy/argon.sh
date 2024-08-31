@@ -16,6 +16,8 @@ rm -rf $1
 }
 git clone --depth 1 https://github.com/sbwml/luci-theme-argon argon && mv -n argon/luci-theme-argon ./ ; rm -rf argon
 git clone --depth 1 https://github.com/sbwml/luci-theme-argon argon && mv -n argon/luci-app-argon-config ./ ; rm -rf argon
+git clone --depth 1 -js 
+
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
 -e 's?\.\./\.\./luci.mk?$(TOPDIR)/feeds/luci/luci.mk?' \
