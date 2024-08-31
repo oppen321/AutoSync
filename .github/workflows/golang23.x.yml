@@ -1,8 +1,8 @@
-name: HD-tproxy
+name: go23.x
 on:
   push:
     paths:
-      - '.github/workflows/golang.yml'
+      - '.github/workflows/golang23.x.yml'
       - 'golang-23.x.sh'
   schedule:
     - cron: 0 */5 * * *
