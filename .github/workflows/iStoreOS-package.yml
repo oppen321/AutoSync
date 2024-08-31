@@ -1,4 +1,4 @@
-name: golang
+name: iStoreOS-package
 on:
   push:
     paths:
