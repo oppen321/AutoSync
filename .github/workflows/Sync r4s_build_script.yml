@@ -1,4 +1,4 @@
-name: Sync Repository
+name: Sync r4s_build_script
 
 on:
   workflow_dispatch:
