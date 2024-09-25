@@ -1,6 +1,7 @@
 name: Sync Repository
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 * * * *'  # 每小时同步一次
 
