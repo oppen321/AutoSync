@@ -1,6 +1,7 @@
 name: Sync r4s_build_script
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 * * * *'  # 每小时同步一次
 
