@@ -27,12 +27,13 @@ jobs:
       - name: Sync files
         run: |
           rsync -av --delete source-repo/ target-repo/
-          
+
       - name: Commit and push changes
         run: |
           cd target-repo
+          git checkout main  # 切换到 main 分支
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
           git add .
           git commit -m "Sync from sbwml/r4s_build_script" || echo "No changes to commit"
-          git push origin main  # 请确认你的默认分支名称
+          git push origin main  # 推送到 main 分支
