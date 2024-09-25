@@ -15,20 +15,20 @@ jobs:
         with:
           repository: oppen321/build-OpenWrt
           token: ${{ secrets.GITHUB_TOKEN }}
-          path: target-repo
+          fetch-depth: 0  # 获取完整历史
 
       - name: Checkout source repo
-        uses: actions/checkout@v2
-        with:
-          repository: sbwml/r4s_build_script
-          token: ${{ secrets.GITHUB_TOKEN }}
-          path: source-repo
+        run: |
+          git clone --depth=1 https://github.com/sbwml/r4s_build_script.git source-repo
 
       - name: Sync files
         run: |
-          cd target-repo
+          cd source-repo
+          git fetch origin master  # 获取最新的 master
+          git checkout master
+          cd ../target-repo
           git checkout main  # 切换到 main 分支
-          git pull ../source-repo master  # 从上游的 master 分支拉取更改
+          git merge ../source-repo/master  # 从上游的 master 分支合并
 
       - name: Commit and push changes
         run: |
