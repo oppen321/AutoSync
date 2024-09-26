@@ -17,7 +17,7 @@ jobs:
         with:
           repository: oppen321/YOF
           token: ${{ secrets.GITHUB_TOKEN }}
-          path: yof
+          path: YOF
           ref: 23.05  # 指定分支
 
       - name: Checkout YAOF repository
@@ -30,9 +30,9 @@ jobs:
 
       - name: List directories
         run: |
-          echo "Contents of yof directory:"
-          ls -R yof
-          echo "Contents of yaof directory:"
+          echo "Contents of YOF directory:"
+          ls -R YOF
+          echo "Contents of YAOF directory:"
           ls -R yaof
 
       - name: Configure Git
@@ -42,19 +42,19 @@ jobs:
 
       - name: Sync changes
         run: |
-          echo "Contents of yaof directory:"
+          echo "Contents of YAOF directory:"
           ls -R yaof
           if [ -d yaof/23.05 ]; then
-            cd yof
-            git checkout 23.05  # 确保在正确的分支上
+            cd YOF
+            git checkout 23.05 || git checkout -b 23.05  # 如果分支不存在，则创建它
             rsync -av --delete ../yaof/23.05/ ./
           else
             echo "Directory yaof/23.05 does not exist. Skipping sync."
           fi
 
-
       - name: Commit and push changes
         run: |
+          cd YOF  # 确保在正确的目录中
           git add .
           git commit -m "Sync from YAOF" || echo "No changes to commit"
           git push origin 23.05
