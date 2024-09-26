@@ -28,6 +28,13 @@ jobs:
           path: yaof
           ref: 23.05  # 指定分支
 
+      - name: List directories
+        run: |
+          echo "Contents of yof directory:"
+          ls -R yof
+          echo "Contents of yaof directory:"
+          ls -R yaof
+
       - name: Configure Git
         run: |
           git config --global user.email "actions@github.com"
