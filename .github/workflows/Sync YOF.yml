@@ -42,8 +42,14 @@ jobs:
 
       - name: Sync changes
         run: |
-          cd yof
-          rsync -av --delete ../yaof/23.05/ ./
+          echo "Contents of yaof directory:"
+          ls -R yaof
+          if [ -d yaof/23.05 ]; then
+            cd yof
+            rsync -av --delete ../yaof/23.05/ ./
+          else
+            echo "Directory yaof/23.05 does not exist. Skipping sync."
+          fi
 
       - name: Commit and push changes
         run: |
