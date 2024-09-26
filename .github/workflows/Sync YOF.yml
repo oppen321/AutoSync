@@ -52,12 +52,16 @@ jobs:
             echo "Directory yaof/23.05 does not exist. Skipping sync."
           fi
 
-      - name: Commit and push changes
+      - name: Upload changes
+        env: 
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}  # 使用存储的访问令牌
         run: |
-          cd YOF  # 确保在正确的目录中
-          git add .
-          git commit -m "Sync from YAOF" || echo "No changes to commit"
-          git push https://$MY_GITHUB_TOKEN@github.com/oppen321/YOF.git 23.05
-        env:
-          MY_GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-
+          cd YOF
+          if git status --porcelain | grep .; then
+            git add .
+            git commit -am "Sync from YAOF at $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+            git push --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/oppen321/YOF.git" HEAD:23.05
+          else
+            echo "nothing to commit"
+            exit 0
+          fi || exit 0
