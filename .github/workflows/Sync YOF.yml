@@ -46,10 +46,12 @@ jobs:
           ls -R yaof
           if [ -d yaof/23.05 ]; then
             cd yof
+            git checkout 23.05  # 确保在正确的分支上
             rsync -av --delete ../yaof/23.05/ ./
           else
             echo "Directory yaof/23.05 does not exist. Skipping sync."
           fi
+
 
       - name: Commit and push changes
         run: |
