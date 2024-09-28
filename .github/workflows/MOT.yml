@@ -15,11 +15,11 @@ on:
         default: 'false'	
 
 jobs:
-  job_Helloword:
+  job_MOT:
     if: github.event.repository.owner.id == github.event.sender.id || ! github.event.sender.id
     runs-on: ubuntu-latest
 
-    name: Update Helloword
+    name: Update MOT
     strategy:
       fail-fast: false
       matrix:
@@ -40,12 +40,12 @@ jobs:
     - name: Clone packages
       run: |
         cd $GITHUB_WORKSPACE
-        chmod +x .github/diy/Helloword.sh
+        chmod +x .github/diy/MOT.sh
         git clone -b main https://github.com/oppen321/MOT.git ${{matrix.target}}
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
         rm -rf `find ./* -maxdepth 0 -type d ! -name "commit"` >/dev/null 2>&1
-        $GITHUB_WORKSPACE/.github/diy/Helloword.sh
+        $GITHUB_WORKSPACE/.github/diy/MOT.sh
 
     - name: Upload
       env: 
