@@ -14,7 +14,7 @@ function mvdir() {
 mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
-git clone --depth 1 https://github.com/sbwml/openwrt_helloworld helloword  && mv -n helloword/* ./;rm -rf helloword
+git clone --depth 1 https://github.com/kenzok8/small && mv -n small/{sing-box,chinadns-ng} ./; rm -rf small
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
