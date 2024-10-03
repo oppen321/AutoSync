@@ -21,6 +21,7 @@ git clone --depth=1 -b main https://github.com/ilxp/luci-app-ikoolproxy ikoolpro
 git clone --depth=1 -b master https://github.com/esirplayground/luci-app-poweroff poweroff && mv -n poweroff/luci-app-poweroff ./; rm -rf poweroff
 git clone --depth=1 -b master https://github.com/destan19/OpenAppFilter OpenAppFilter && mv -n OpenAppFilter/OpenAppFilter ./; rm -rf OpenAppFilter
 git clone --depth=1 -b main https://github.com/Jason6111/luci-app-netdata netdata && mv -n netdata/luci-app-netdata ./; rm -rf netdata
+git clone --depth=1 -b main https://github.com/Lienol/openwrt-package && mv -n openwrt-package/* ./ ; rm -rf openwrt-package
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
