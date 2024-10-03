@@ -14,7 +14,9 @@ function mvdir() {
 mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
-git
+git clone --depth 1 -b v5-lua https://github.com/sbwml/luci-app-mosdns mosdns && mv -n mosdns/luci-app-mosdns ./; rm -rf mosdns
+git clone --depth 1 -b master https://github.com/kongfl888/luci-app-adguardhome adguardhome && mv -n adguardhome/luci-app-adguardhome ./; rm -rf adguardhome
+git clone --depth=1 -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush wechatpush && mv -n wechatpush/luci-app-wechatpush ./; rm -rf wechatpush
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
 -e 's?\.\./\.\./luci.mk?$(TOPDIR)/feeds/luci/luci.mk?' \
