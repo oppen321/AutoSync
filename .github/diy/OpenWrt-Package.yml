@@ -22,10 +22,10 @@ git clone --depth=1 -b master https://github.com/esirplayground/luci-app-powerof
 git clone --depth=1 -b master https://github.com/destan19/OpenAppFilter OpenAppFilter && mv -n OpenAppFilter/OpenAppFilter ./; rm -rf OpenAppFilter
 git clone --depth=1 -b main https://github.com/Jason6111/luci-app-netdata netdata && mv -n netdata/luci-app-netdata ./; rm -rf netdata
 git clone --depth=1 -b main https://github.com/Lienol/openwrt-package && mv -n openwrt-package/* ./ ; rm -rf openwrt-package
-git clone --depth 1 -b master https://github.com/fw876/helloworld && mv -n helloworld/{luci-app-ssr-plus,tuic-client,shadow-tls} ./ ; rm -rf helloworld
+git clone --depth 1 -b master https://github.com/fw876/helloworld && mv -n helloworld/{luci-app-ssr-plus,shadow-tls} ./ ; rm -rf helloworld
 git clone --depth 1 -b main https://github.com/xiaorouji/openwrt-passwall passwall1 && mv -n passwall1/luci-app-passwall  ./; rm -rf passwall1
 git clone --depth 1 -b main https://github.com/xiaorouji/openwrt-passwall2 passwall2 && mv -n passwall2/luci-app-passwall2 ./;rm -rf passwall2
-git clone --depth 1 -b https://github.com/xiaorouji/openwrt-passwall-packages && mv -n openwrt-passwall-packages/* ./ ; rm -rf {.github} && rm -rf openwrt-passwall-packages
+git clone --depth 1 -b main https://github.com/xiaorouji/openwrt-passwall-packages && mv -n openwrt-passwall-packages/* ./ ; rm -rf {.github} && rm -rf openwrt-passwall-packages
 
 
 sed -i \
