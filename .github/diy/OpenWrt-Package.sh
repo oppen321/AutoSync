@@ -26,7 +26,7 @@ git clone --depth 1 -b master https://github.com/fw876/helloworld && mv -n hello
 git clone --depth 1 -b main https://github.com/xiaorouji/openwrt-passwall passwall1 && mv -n passwall1/luci-app-passwall  ./; rm -rf passwall1
 git clone --depth 1 -b main https://github.com/xiaorouji/openwrt-passwall2 passwall2 && mv -n passwall2/luci-app-passwall2 ./;rm -rf passwall2
 git clone --depth 1 -b main https://github.com/xiaorouji/openwrt-passwall-packages && mv -n openwrt-passwall-packages/* ./ ; rm -rf {.github} && rm -rf openwrt-passwall-packages
-
+git clone --depth 1 -b master https://github.com/vernesong/OpenClash && mv -n OpenClash/{luci-app-openclash} ./ ; rm -rf OpenClash
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
