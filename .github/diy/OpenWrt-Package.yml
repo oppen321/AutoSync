@@ -17,6 +17,11 @@ rm -rf $1
 git clone --depth 1 -b v5-lua https://github.com/sbwml/luci-app-mosdns mosdns && mv -n mosdns/luci-app-mosdns ./; rm -rf mosdns
 git clone --depth 1 -b master https://github.com/kongfl888/luci-app-adguardhome adguardhome && mv -n adguardhome/luci-app-adguardhome ./; rm -rf adguardhome
 git clone --depth=1 -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush wechatpush && mv -n wechatpush/luci-app-wechatpush ./; rm -rf wechatpush
+git clone --depth=1 -b main https://github.com/ilxp/luci-app-ikoolproxy ikoolproxy && mv -n ikoolproxy/luci-app-ikoolproxy ./; rm -rf ikoolproxy
+git clone --depth=1 -b master https://github.com/esirplayground/luci-app-poweroff poweroff && mv -n poweroff/luci-app-poweroff ./; rm -rf poweroff
+git clone --depth=1 -b master https://github.com/destan19/OpenAppFilter OpenAppFilter && mv -n OpenAppFilter/OpenAppFilter ./; rm -rf OpenAppFilter
+git clone --depth=1 -b main https://github.com/Jason6111/luci-app-netdata netdata && mv -n netdata/luci-app-netdata ./; rm -rf netdata
+
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
 -e 's?\.\./\.\./luci.mk?$(TOPDIR)/feeds/luci/luci.mk?' \
