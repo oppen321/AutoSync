@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - '.github/workflows/Lede.yml'
-      - 'master.sh'  
+      - 'Lede.sh'  
   schedule:
     - cron: 0 */6 * * *
   repository_dispatch:
