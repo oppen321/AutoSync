@@ -5,8 +5,8 @@ on:
     paths:
       - '.github/workflows/OpenWrt.yml'
       - 'OpenWrt..sh'  
-  schedule:
-    - cron: 0 */6 * * *
+#  schedule:
+#    - cron: 0 */6 * * *
   repository_dispatch:
   workflow_dispatch:
     inputs:
