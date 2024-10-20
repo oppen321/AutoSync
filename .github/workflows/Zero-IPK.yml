@@ -5,8 +5,8 @@ on:
     paths:
       - '.github/workflows/Zero-IPK.yml'
       - 'Zero-IPK.sh'
-  schedule:
-    - cron: 0 */4 * * *
+#  schedule:
+#    - cron: 0 */4 * * *
   repository_dispatch:
   workflow_dispatch:
     inputs:
