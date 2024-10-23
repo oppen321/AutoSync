@@ -41,7 +41,7 @@ jobs:
     - name: Clone packages
       run: |
         cd $GITHUB_WORKSPACE
-        chmod +x .github/diy/Zero-IPK.sh
+        chmod +x .github/diy/Zero.sh
         git clone -b master https://github.com/oppen321/Zero-IPK.git ${{matrix.target}}
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
