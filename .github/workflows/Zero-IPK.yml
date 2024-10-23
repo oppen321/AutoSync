@@ -16,7 +16,7 @@ on:
         default: 'false'	
 
 jobs:
-  job_small:
+  job_Zero:
     if: github.event.repository.owner.id == github.event.sender.id || ! github.event.sender.id
     runs-on: ubuntu-latest
 
