@@ -39,6 +39,12 @@ git clone --depth=1 https://github.com/Jason6111/luci-app-netdata
 git clone --depth=1 https://github.com/Lienol/openwrt-package && mv -n  openwrt-package/luci-app-filebrowser openwrt-package/luci-app-ssr-mudb-server ./ ; rm -rf openwrt-package
 git clone --depth=1 https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
 git clone --depth=1 https://github.com/sirpdboy/sirpdboy-package && mv -n  sirpdboy-package/luci-app-socat ./ ; rm -rf sirpdboy-package
+git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
+git clone --depth=1 https://github.com/pymumu/luci-app-smartdns
+git clone --depth=1 https://github.com/pymumu/openwrt-smartdns
+git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite
+git clone --depth=1 https://github.com/ximiTech/msd_lite
+git clone --depth=1 https://github.com/oppen321/luci-app-gpsysupgrade
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
