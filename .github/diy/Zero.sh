@@ -33,6 +33,13 @@ git clone --depth=1 https://github.com/oppen321/luci-app-adguardhome
 git clone --depth 1 https://github.com/yaof2/luci-app-ikoolproxy
 git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go ddns-go && mv -n ddns-go/{luci-app-ddns-go,ddns-go} ./ ; rm -rf ddns-go
 git clone --depth 1 https://github.com/sbwml/luci-app-alist alist && mv -n alist/{luci-app-alist,alist} ./ ; rm -rf alist
+git clone --depth 1 https://github.com/tty228/luci-app-wechatpush
+git clone --depth 1 https://github.com/destan19/OpenAppFilter OpenAppFilter && mv -n OpenAppFilter/{luci-app-oaf,oaf,open-app-filter} ./ ; rm -rf OpenAppFilter
+git clone --depth=1 https://github.com/Jason6111/luci-app-netdata
+git clone --depth=1 https://github.com/Lienol/openwrt-package && mv -n  openwrt-package/luci-app-filebrowser openwrt-package/luci-app-ssr-mudb-server ./ ; rm -rf openwrt-package
+git clone --depth=1 https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
+git clone --depth=1 https://github.com/sirpdboy/sirpdboy-package
+
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
 -e 's?\.\./\.\./luci.mk?$(TOPDIR)/feeds/luci/luci.mk?' \
