@@ -45,6 +45,7 @@ git clone --depth=1 https://github.com/pymumu/openwrt-smartdns
 git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite
 git clone --depth=1 https://github.com/ximiTech/msd_lite
 git clone --depth=1 https://github.com/oppen321/luci-app-gpsysupgrade
+git clone --depth=1 https://github.com/kiddin9/luci-theme-edge
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
