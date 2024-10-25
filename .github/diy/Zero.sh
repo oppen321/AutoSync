@@ -47,6 +47,8 @@ git clone --depth=1 https://github.com/oppen321/luci-app-gpsysupgrade
 git clone --depth=1 https://github.com/kiddin9/luci-theme-edge
 git clone --depth=1 https://github.com/sirpdboy/luci-app-eqosplus
 git clone --depth=1 https://github.com/kiddin9/kwrt-packages kwrt && mv -n kwrt/wrtbwmon ./ ; rm -rf kwrt
+git clone https://github.com/sbwml/v2ray-geodata
+
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
 -e 's?\.\./\.\./luci.mk?$(TOPDIR)/feeds/luci/luci.mk?' \
