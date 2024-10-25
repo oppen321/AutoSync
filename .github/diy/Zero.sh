@@ -38,7 +38,7 @@ git clone --depth 1 https://github.com/destan19/OpenAppFilter OpenAppFilter && m
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata
 git clone --depth=1 https://github.com/Lienol/openwrt-package && mv -n  openwrt-package/luci-app-filebrowser openwrt-package/luci-app-ssr-mudb-server ./ ; rm -rf openwrt-package
 git clone --depth=1 https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
-git clone --depth=1 https://github.com/sirpdboy/sirpdboy-package
+git clone --depth=1 https://github.com/sirpdboy/sirpdboy-package && mv -n  sirpdboy-package/luci-app-socat ./ ; rm -rf sirpdboy-package
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
