@@ -32,7 +32,6 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-autotimeset
 git clone --depth=1 https://github.com/oppen321/luci-app-adguardhome
 git clone --depth 1 https://github.com/yaof2/luci-app-ikoolproxy
 git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go ddns-go && mv -n ddns-go/{luci-app-ddns-go,ddns-go} ./ ; rm -rf ddns-go
-git clone --depth 1 https://github.com/kenzok8/wall && mv -n wall/adguardhome ./ ; rm -rf wall
 git clone --depth 1 https://github.com/sbwml/luci-app-alist alist && mv -n alist/{luci-app-alist,alist} ./ ; rm -rf alist
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
