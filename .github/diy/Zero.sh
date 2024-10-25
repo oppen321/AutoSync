@@ -19,7 +19,7 @@ git clone --depth 1 -b main https://github.com/xiaorouji/openwrt-passwall passwa
 git clone --depth 1 https://github.com/vernesong/OpenClash && mv -n OpenClash/luci-app-openclash ./; rm -rf OpenClash
 git clone --depth 1 https://github.com/immortalwrt/homeproxy luci-app-homeproxy
 git clone --depth 1 https://github.com/morytyann/OpenWrt-mihomo OpenWrt-mihomo && mv -n OpenWrt-mihomo/*mihomo ./ ; rm -rf OpenWrt-mihomo
-git clone --depth 1 https://github.com/fw876/helloworld && mv -n helloworld/{luci-app-ssr-plus,shadow-tls,redsocks2} ./ ; rm -rf helloworld
+git clone --depth 1 https://github.com/fw876/helloworld && mv -n helloworld/{luci-app-ssr-plus,shadow-tls,redsocks2,lua-neturl} ./ ; rm -rf helloworld
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages  && mv -n openwrt-passwall-packages/* ./ ; rm -rf openwrt-passwall-packages
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
