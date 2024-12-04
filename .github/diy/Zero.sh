@@ -15,6 +15,7 @@ mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
 git clone --depth 1 https://github.com/sbwml/openwrt_helloworld helloworld && mv -n helloworld/* ./;rm -rf helloworld
+git clone --depth 1 https://github.com/sbwml/luci-theme-argon argon  && mv -n argon/* ./;rm -rf argon
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
