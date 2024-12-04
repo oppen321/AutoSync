@@ -16,6 +16,14 @@ rm -rf $1
 }
 git clone --depth 1 https://github.com/sbwml/openwrt_helloworld helloworld && mv -n helloworld/* ./;rm -rf helloworld
 git clone --depth 1 https://github.com/sbwml/luci-theme-argon argon  && mv -n argon/* ./;rm -rf argon
+git clone --depth=1 https://github.com/sirpdboy/luci-app-netwizard
+git clone --depth=1 https://github.com/oppen321/luci-app-gpsysupgrade
+git clone --depth=1 -b openwrt-24.10 https://github.com/sbwml/default-settings
+git clone --depth=1 https://github.com/sbwml/OpenAppFilter
+git clone --depth=1 https://github.com/sirpdboy/luci-app-partexp
+git clone --depth=1 https://github.com/sbwml/luci-app-webdav
+git clone --depth=1 https://github.com/sirpdboy/luci-app-lucky
+
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
