@@ -3,7 +3,7 @@ name: Zero-IPK
 on:
   push:
     paths:
-      - '.github/workflows/Zero-IPK.yml'
+      - '.github/workflows/package.yml'
       - 'package.sh'
   schedule:
     - cron: 0 */4 * * *
