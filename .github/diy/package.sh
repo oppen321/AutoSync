@@ -18,6 +18,7 @@ git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/luci && mv -
 git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/packages && mv -n packages/net/{socat,zerotier} ./ && rm -rf packages
 git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/packages && mv -n packages/admin/netdata ./ && rm -rf packages
 git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/packages && mv -n packages/utils/parted ./ && rm -rf packages
+git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/immortalwrt && mv -n immortalwrt/package/emortal/cpufreq ./ && rm -rf immortalwrt
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
