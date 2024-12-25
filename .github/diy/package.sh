@@ -20,7 +20,7 @@ git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/packages && 
 git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/packages && mv -n packages/utils/parted ./ && rm -rf packages
 git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/immortalwrt && mv -n immortalwrt/package/emortal/cpufreq ./ && rm -rf immortalwrt
 git clone --depth 1 -b master https://github.com/coolsnowwolf/lede && mv -n lede/package/qca/shortcut-fe ./ && rm -rf lede
-git clone --depth 1 -b main https://github.com/sbwml/openwrt_pkgs && mv -n openwrt_pkgs/luci-app-ota ./ && rm -rf openwrt_pkgs
+git clone --depth 1 -b main https://github.com/sbwml/openwrt_pkgs && mv -n openwrt_pkgs/{luci-app-ota,fw_download_tool} ./ && rm -rf openwrt_pkgs
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
