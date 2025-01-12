@@ -19,7 +19,6 @@ git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/packages && 
 git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/packages && mv -n packages/admin/netdata ./ && rm -rf packages
 git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/packages && mv -n packages/utils/parted ./ && rm -rf packages
 git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/immortalwrt && mv -n immortalwrt/package/emortal/cpufreq ./ && rm -rf immortalwrt
-git clone --depth 1 -b master https://github.com/coolsnowwolf/lede && mv -n lede/package/qca/shortcut-fe ./ && rm -rf lede
 git clone --depth 1 -b main https://github.com/sbwml/openwrt_pkgs && mv -n openwrt_pkgs/{luci-app-ota,fw_download_tool,ddns-scripts-aliyun,bash-completion,luci-app-netspeedtest,speedtest-cli} ./ && rm -rf openwrt_pkgs
 git clone --depth 1 -b main https://github.com/siropboy/luci-app-bypass && mv -n luci-app-bypass ./ && rm -rf luci-app-bypass
 
