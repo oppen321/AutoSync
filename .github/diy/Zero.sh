@@ -23,7 +23,8 @@ git clone --depth=1 https://github.com/sbwml/OpenAppFilter
 git clone --depth=1 https://github.com/sirpdboy/luci-app-partexp
 git clone --depth=1 https://github.com/sbwml/luci-app-webdav
 git clone --depth=1 https://github.com/sirpdboy/luci-app-lucky
-
+git clone --depth=1 https://github.com/siropboy/luci-app-bypass
+git clone --depth=1 https://github.com/muink/openwrt-fchomo
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
