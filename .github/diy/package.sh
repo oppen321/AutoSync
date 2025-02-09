@@ -17,6 +17,7 @@ rm -rf $1
 git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/luci && mv -n luci/applications/{luci-app-cpufreq,luci-app-diskman,luci-app-netdata,luci-app-ramfree,luci-app-socat,luci-app-syncdial,luci-app-usb-printer,luci-app-openvpn-server} ./ && rm -rf luci
 git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/packages && mv -n packages/net/socat ./ && rm -rf packages
 git clone --depth 1 -b openwrt-23.05 https://github.com/coolsnowwolf/luci && mv -n luci/applications/luci-app-zerotier ./ && rm -rf luci
+git clone --depth 1 -b openwrt-23.05 https://github.com/coolsnowwolf/luci && mv -n luci/themes/luci-theme-design ./ && rm -rf luci
 git clone --depth 1 -b master https://github.com/coolsnowwolf/packages && mv -n packages/net/zerotier ./ && rm -rf packages
 git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/packages && mv -n packages/admin/netdata ./ && rm -rf packages
 git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/packages && mv -n packages/utils/parted ./ && rm -rf packages
