@@ -28,6 +28,7 @@ git clone --depth 1 -b main https://github.com/sbwml/openwrt_pkgs && mv -n openw
 git clone --depth 1 -b main https://github.com/siropboy/luci-app-bypass && mv -n luci-app-bypass ./ && rm -rf luci-app-bypass
 git clone --depth 1 -b main https://github.com/Lienol/openwrt-package && mv -n openwrt-package/luci-app-guest-wifi ./ && rm -rf openwrt-package
 git clone --depth 1 -b istoreos-24.10 https://github.com/istoreos/istoreos && mv -n istoreos/package/istoreos-files ./ && rm -rf istoreos
+git clone --depth 1 -b main https://github.com/linkease/istore
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
