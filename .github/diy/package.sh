@@ -30,7 +30,6 @@ git clone --depth 1 -b main https://github.com/Lienol/openwrt-package && mv -n o
 git clone --depth 1 -b istoreos-24.10 https://github.com/istoreos/istoreos && mv -n istoreos/package/istoreos-files ./ && rm -rf istoreos
 git clone --depth 1 -b main https://github.com/linkease/nas-packages-luci && mv -n nas-packages-luci/luci/luci-app-quickstart ./ && rm -rf nas-packages-luci
 git clone --depth 1 -b main https://github.com/linkease/nas-packages && mv -n nas-packages/network/services/quickstart ./ && rm -rf nas-packages
-
 git clone --depth 1 -b main https://github.com/linkease/istore
 
 sed -i \
