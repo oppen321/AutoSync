@@ -28,7 +28,7 @@ git clone --depth 1 https://github.com/sirpdboy/luci-app-parentcontrol
 git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus
 git clone --depth 1 https://github.com/sirpdboy/luci-app-autotimeset
 git clone --depth 1 https://github.com/animegasan/luci-app-wolplus
-git clone --depth 1 https://github.com/lisaac/luci-app-diskman
+git clone --depth 1 https://github.com/lisaac/luci-app-diskman && mv -n luci-app-diskman/applications/luci-app-diskman ./ && rm -rf luci-app-diskman
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
