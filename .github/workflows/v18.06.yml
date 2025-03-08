@@ -1,4 +1,4 @@
-name: lean
+name: v18.06
 
 on:
   push:
