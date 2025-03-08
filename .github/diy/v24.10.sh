@@ -14,23 +14,17 @@ function mvdir() {
 mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
-git clone --depth 1 https://github.com/sbwml/openwrt_helloworld helloworld && mv -n helloworld/* ./;rm -rf helloworld
-git clone --depth 1 https://github.com/sbwml/luci-theme-argon argon  && mv -n argon/* ./;rm -rf argon
-git clone --depth=1 https://github.com/sirpdboy/luci-app-netwizard
-git clone --depth=1 https://github.com/oppen321/luci-app-gpsysupgrade
-git clone --depth=1 -b openwrt-24.10 https://github.com/sbwml/default-settings
-git clone --depth=1 https://github.com/sbwml/OpenAppFilter
-git clone --depth=1 https://github.com/sirpdboy/luci-app-partexp
-git clone --depth=1 https://github.com/sbwml/luci-app-webdav
-git clone --depth=1 https://github.com/sirpdboy/luci-app-lucky
-git clone --depth=1 https://github.com/siropboy/luci-app-bypass
-git clone --depth=1 https://github.com/muink/openwrt-fchomo
+git clone --depth 1 -b js https://github.com/sirpdboy/luci-theme-kucat
+git clone --depth 1 https://github.com/sirpdboy/luci-app-kucat-config
+git clone --depth 1 https://github.com/sirpdboy/luci-app-partexp
+git clone --depth 1 https://github.com/sirpdboy/luci-app-advancedplus
+git clone --depth 1 https://github.com/sirpdboy/luci-app-lucky
+git clone --depth 1 https://github.com/sirpdboy/luci-app-netwizard
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
 -e 's?\.\./\.\./luci.mk?$(TOPDIR)/feeds/luci/luci.mk?' \
 */Makefile
-sed -i 's/+libcap /+libcap +libcap-bin /' luci-app-openclash/Makefile
 
 rm -rf ./*/.git ./*/.gitattributes ./*/.svn ./*/.github ./*/.gitignore
 #find . -type f -name Makefile -exec sed -i 's/PKG_BUILD_FLAGS:=no-mips16/PKG_USE_MIPS16:=0/g' {} +
