@@ -3,8 +3,8 @@ name: lean
 on:
   push:
     paths:
-      - '.github/workflows/lean.yml'
-      - 'lean.sh'
+      - '.github/workflows/v18.06.yml'
+      - 'v18.06.sh'
   schedule:
     - cron: 0 */4 * * *
   repository_dispatch:
@@ -24,7 +24,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [main]
+        target: [v18.06]
         
     steps:
     - name: Checkout
@@ -42,11 +42,11 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE
         chmod +x .github/diy/lean.sh
-        git clone -b lean https://github.com/oppen321/Zero-package.git ${{matrix.target}}
+        git clone -b v18.06 https://github.com/oppen321/openwrt-package.git ${{matrix.target}}
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
         rm -rf `find ./* -maxdepth 0 -type d ! -name "commit"` >/dev/null 2>&1
-        $GITHUB_WORKSPACE/.github/diy/lean.sh
+        $GITHUB_WORKSPACE/.github/diy/v18.06.sh
         bash /$GITHUB_WORKSPACE/.github/diy/convert_translation.sh
         bash /$GITHUB_WORKSPACE/.github/diy/create_acl_for_luci.sh -a
         bash /$GITHUB_WORKSPACE/.github/diy/Modify.sh
@@ -59,7 +59,7 @@ jobs:
         if git status --porcelain | grep .; then
           git add .
           git commit -am "update $(date '+%Y-%m-%d %H:%M:%S')"
-          git push --quiet "https://${{ secrets.TOKEN_OPPEN321 }}@github.com/oppen321/Zero-package.git" HEAD:lean
+          git push --quiet "https://${{ secrets.TOKEN_OPPEN321 }}@github.com/oppen321/openwrt-package.git" HEAD:v18.06
         else
           echo "nothing to commit"
           exit 0
