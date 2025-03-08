@@ -1,10 +1,10 @@
-name: Zero-IPK
+name: v24.10
 
 on:
   push:
     paths:
-      - '.github/workflows/Zero-IPK.yml'
-      - 'Zero.sh'
+      - '.github/workflows/v24.10.yml'
+      - 'v24.10.sh'
   schedule:
     - cron: 0 */4 * * *
   repository_dispatch:
@@ -46,7 +46,7 @@ jobs:
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
         rm -rf `find ./* -maxdepth 0 -type d ! -name "commit"` >/dev/null 2>&1
-        $GITHUB_WORKSPACE/.github/diy/Zero.sh
+        $GITHUB_WORKSPACE/.github/diy/v24.10.sh
         bash /$GITHUB_WORKSPACE/.github/diy/convert_translation.sh
         bash /$GITHUB_WORKSPACE/.github/diy/create_acl_for_luci.sh -a
         bash /$GITHUB_WORKSPACE/.github/diy/Modify.sh
@@ -59,7 +59,7 @@ jobs:
         if git status --porcelain | grep .; then
           git add .
           git commit -am "update $(date '+%Y-%m-%d %H:%M:%S')"
-          git push --quiet "https://${{ secrets.TOKEN_OPPEN321 }}@github.com/oppen321/Zero-IPK.git" HEAD:main
+          git push --quiet "https://${{ secrets.TOKEN_OPPEN321 }}@github.com/oppen321/openwrt-package.git" HEAD:v24.10
         else
           echo "nothing to commit"
           exit 0
