@@ -15,6 +15,18 @@ mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
 
+git clone --depth 1 -b 18.06 https://github.com/sirpdboy/luci-theme-kucat
+git clone --depth 1 https://github.com/sirpdboy/luci-app-kucat-config
+git clone --depth 1 https://github.com/sirpdboy/luci-app-partexp
+git clone --depth 1 https://github.com/sirpdboy/luci-app-advancedplus
+git clone --depth 1 https://github.com/sirpdboy/luci-app-lucky
+git clone --depth 1 https://github.com/sirpdboy/luci-app-netwizard
+git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+git clone --depth 1 https://github.com/destan19/OpenAppFilter
+git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
+git clone --depth 1 https://github.com/sirpdboy/luci-app-parentcontrol
+git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus
+git clone --depth 1 https://github.com/sirpdboy/luci-app-autotimeset
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
