@@ -20,6 +20,8 @@ git clone --depth 1 https://github.com/sirpdboy/luci-app-partexp
 git clone --depth 1 https://github.com/sirpdboy/luci-app-advancedplus
 git clone --depth 1 https://github.com/sirpdboy/luci-app-lucky
 git clone --depth 1 https://github.com/sirpdboy/luci-app-netwizard
+git clone --depth 1 -b master https://github.com/jerrykuku/luci-theme-argon
+git clone --depth 1 https://github.com/destan19/OpenAppFilter
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
