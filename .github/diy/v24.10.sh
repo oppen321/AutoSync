@@ -32,7 +32,7 @@ git clone --depth 1 -b main https://github.com/sirpdboy/sirpdboy-package && mv -
 git clone --depth 1 https://github.com/sbwml/openwrt_pkgs && mv -n openwrt_pkgs/{luci-app-netspeedtest,bash-completion,speedtest-cli} ./ && rm -rf openwrt_pkgs
 git clone --depth 1 https://github.com/immortalwrt/luci && mv -n luci/applications/{luci-app-cpufreq,luci-app-ramfree,luci-app-socat,luci-app-usb-printer,luci-app-zerotier} ./ && rm -rf luci
 git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/packages && mv -n packages/net/{socat,zerotier} ./ && rm -rf packages
-git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/immortalwrt && mv -n packages/emortal/cpufreq  ./ && rm -rf immortalwrt
+git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/immortalwrt && mv -n immortalwrt/emortal/cpufreq  ./ && rm -rf immortalwrt
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
