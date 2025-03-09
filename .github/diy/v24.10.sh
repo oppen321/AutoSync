@@ -32,7 +32,7 @@ git clone --depth 1 https://github.com/lisaac/luci-app-diskman
 git clone --depth 1 https://github.com/sbwml/openwrt_pkgs && mv -n openwrt_pkgs/{luci-app-netspeedtest,bash-completion,speedtest-cli} ./ && rm -rf openwrt_pkgs
 git clone --depth 1 https://github.com/immortalwrt/luci && mv -n luci/applications/{luci-app-cpufreq,luci-app-ramfree,luci-app-socat,luci-app-usb-printer,luci-app-zerotier} ./ && rm -rf luci
 git clone --depth 1 https://github.com/immortalwrt/packages && mv -n packages/net/{socat,zerotier} ./ && rm -rf packages
-git clone --depth 1 https://github.com/immortalwrt/packages && mv -n packages/emortal/cpufreq  ./ && rm -rf packages
+git clone --depth 1 https://github.com/immortalwrt/packages && mv -n packages/emortal/{cpufreq}  ./ && rm -rf packages
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
