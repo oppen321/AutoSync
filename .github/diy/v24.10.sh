@@ -31,6 +31,7 @@ git clone --depth 1 https://github.com/lisaac/luci-app-diskman
 git clone --depth 1 https://github.com/sbwml/luci-app-mentohust
 git clone --depth 1 https://github.com/pymumu/luci-app-smartdns
 git clone --depth 1 https://github.com/pymumu/openwrt-smartdns
+git clone --depth 1 https://github.com/kenzok8/openwrt-packages && mv -n openwrt-packages/{adguardhome,luci-app-adguardhome} ./ && rm -rf openwrt-packages
 git clone --depth 1 -b main https://github.com/sbwml/luci-app-alist && mv -n luci-app-alist/{luci-app-alist,alist} ./ && rm -rf luci-app-alist
 git clone --depth 1 -b v5 https://github.com/sbwml/luci-app-mosdns && mv -n luci-app-mosdns/{luci-app-mosdns,mosdns,v2dat} ./ && rm -rf luci-app-mosdns
 git clone --depth 1 -b main https://github.com/sirpdboy/sirpdboy-package && mv -n sirpdboy-package/luci-app-wolplus ./ && rm -rf sirpdboy-package
