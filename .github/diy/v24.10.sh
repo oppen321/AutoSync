@@ -35,7 +35,7 @@ git clone --depth 1 https://github.com/kenzok8/openwrt-packages && mv -n openwrt
 git clone --depth 1 -b main https://github.com/sbwml/luci-app-alist && mv -n luci-app-alist/{luci-app-alist,alist} ./ && rm -rf luci-app-alist
 git clone --depth 1 -b v5 https://github.com/sbwml/luci-app-mosdns && mv -n luci-app-mosdns/{luci-app-mosdns,mosdns,v2dat} ./ && rm -rf luci-app-mosdns
 git clone --depth 1 -b main https://github.com/sirpdboy/sirpdboy-package && mv -n sirpdboy-package/luci-app-wolplus ./ && rm -rf sirpdboy-package
-git clone --depth 1 https://github.com/sbwml/openwrt_pkgs && mv -n openwrt_pkgs/{luci-app-netspeedtest,bash-completion,speedtest-cli} ./ && rm -rf openwrt_pkgs
+git clone --depth 1 https://github.com/sbwml/openwrt_pkgs && mv -n openwrt_pkgs/{luci-app-netspeedtest,bash-completion,speedtest-cli,coremark,ddns-scripts-aliyun} ./ && rm -rf openwrt_pkgs
 git clone --depth 1 https://github.com/immortalwrt/luci && mv -n luci/applications/{luci-app-netdata,luci-app-cpufreq,luci-app-ramfree,luci-app-socat,luci-app-usb-printer,luci-app-zerotier} ./ && rm -rf luci
 git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/packages && mv -n packages/net/{socat,zerotier} ./ && rm -rf packages
 git clone --depth 1 -b openwrt-24.10 https://github.com/immortalwrt/immortalwrt && mv -n immortalwrt/package/emortal/cpufreq ./ && rm -rf immortalwrt
