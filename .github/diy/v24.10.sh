@@ -25,6 +25,7 @@ git clone --depth 1 -b master https://github.com/jerrykuku/luci-theme-argon
 git clone --depth 1 https://github.com/destan19/OpenAppFilter
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
 git clone --depth 1 https://github.com/sirpdboy/luci-app-parentcontrol
+git clone --depth 1 https://github.com/sirpdboy/luci-app-timecontrol
 git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus
 git clone --depth 1 https://github.com/sirpdboy/luci-app-taskplan
 git clone --depth 1 https://github.com/lisaac/luci-app-diskman
