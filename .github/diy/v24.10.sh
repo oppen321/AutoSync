@@ -15,6 +15,9 @@ mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
 
+git clone --depth 1 https://github.com/4IceG/luci-app-sms-tool-js
+git clone --depth 1 https://github.com/4IceG/luci-app-3ginfo-lite
+git clone --depth 1 https://github.com/4IceG/luci-app-modemband
 git clone --depth 1 https://github.com/sbwml/luci-app-webdav
 git clone --depth 1 -b js https://github.com/sirpdboy/luci-theme-kucat
 git clone --depth 1 https://github.com/sirpdboy/luci-app-kucat-config
