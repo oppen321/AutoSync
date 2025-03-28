@@ -40,6 +40,10 @@ git clone --depth 1 https://github.com/sbwml/luci-app-mentohust
 git clone --depth 1 https://github.com/sbwml/luci-app-airplay2
 git clone --depth 1 https://github.com/oppen321/luci-app-adguardhome
 git clone --depth 1 https://github.com/sirpdboy/netspeedtest
+git clone --depth 1 https://github.com/oppen321/package_new_nat6
+git clone --depth 1 https://github.com/oppen321/nft-fullcone
+git clone --depth 1 https://github.com/oppen321/shortcut-fe
+git clone --depth 1 https://github.com/oppen321/package_new_natflow
 git clone --depth 1 -b main https://github.com/sbwml/luci-app-alist && mv -n luci-app-alist/{luci-app-alist,alist} ./ && rm -rf luci-app-alist
 git clone --depth 1 -b v5 https://github.com/sbwml/luci-app-mosdns && mv -n luci-app-mosdns/{luci-app-mosdns,mosdns,v2dat} ./ && rm -rf luci-app-mosdns
 git clone --depth 1 -b main https://github.com/sirpdboy/sirpdboy-package && mv -n sirpdboy-package/luci-app-wolplus ./ && rm -rf sirpdboy-package
