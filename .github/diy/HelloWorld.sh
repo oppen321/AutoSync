@@ -18,6 +18,10 @@ rm -rf $1
 git clone --depth 1 -b v5 https://github.com/sbwml/openwrt_helloworld && mv -n openwrt_helloworld/{chinadns-ng,dns2socks,dns2tcp,geoview,hysteria,ipt2socks,lua-neturl,luci-app-homeproxy,luci-app-nikki,luci-app-openclash,luci-app-passwall,luci-app-passwall2,luci-app-ssr-plus,microsocks,naiveproxy,nikki,pdnsd,redsocks2,shadow-tls,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,sing-box,tcping,trojan-plus,trojan,tuic-client,v2ray-core,v2ray-geodata,v2ray-plugin,xray-core,xray-plugin} ./ && rm -rf openwrt_helloworld
 git clone --depth 1 https://github.com/QiuSimons/luci-app-daed
 git clone --depth 1 https://github.com/oppen321/libcron
+git clone --depth 1 https://github.com/fcshark-org/openwrt-fchomo
+git clone --depth 1 https://github.com/yichya/luci-app-xray
+git clone --depth 1 https://github.com/Thaolga/openwrt-nekobox
+
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
