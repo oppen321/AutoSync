@@ -15,6 +15,9 @@ mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
 
+git clone --depth 1 https://github.com/linkease/nas-packages-luci
+git clone --depth 1 https://github.com/linkease/nas-packages
+git clone --depth 1 https://github.com/linkease/istore
 git clone --depth 1 https://github.com/sbwml/autocore-arm
 git clone --depth 1 https://github.com/4IceG/luci-app-qfirehose
 git clone --depth 1 https://github.com/4IceG/luci-app-sms-tool-js
