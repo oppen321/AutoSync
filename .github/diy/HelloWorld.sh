@@ -19,8 +19,6 @@ git clone --depth 1 -b v5 https://github.com/sbwml/openwrt_helloworld && mv -n o
 git clone --depth 1 https://github.com/QiuSimons/luci-app-daed
 git clone --depth 1 https://github.com/oppen321/libcron
 git clone --depth 1 https://github.com/yichya/luci-app-xray
-git clone --depth 1 https://github.com/Thaolga/openwrt-nekobox
-
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
