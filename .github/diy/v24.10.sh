@@ -15,8 +15,6 @@ mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
 
-git clone --depth 1 https://github.com/linkease/nas-packages-luci
-git clone --depth 1 https://github.com/linkease/nas-packages
 git clone --depth 1 https://github.com/linkease/istore
 git clone --depth 1 https://github.com/sbwml/autocore-arm
 git clone --depth 1 https://github.com/4IceG/luci-app-qfirehose
@@ -48,6 +46,8 @@ git clone --depth 1 https://github.com/oppen321/nft-fullcone
 git clone --depth 1 https://github.com/oppen321/shortcut-fe
 git clone --depth 1 https://github.com/oppen321/package_new_natflow
 git clone --depth 1 https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic
+git clone --depth 1 https://github.com/linkease/nas-packages-luci  && mv -n nas-packages-luci/luci/{luci-app-ddnsto,luci-app-floatip,luci-app-linkease,luci-app-quickstart}  ./ && rm -rf nas-packages-luci
+git clone --depth 1 https://github.com/linkease/nas-packages  && mv -n nas-packages/network/services/{ddnsto,floatip,linkease,quickstart}  ./ && rm -rf nas-packages
 git clone --depth 1 -b istoreos-24.10 https://github.com/istoreos/istoreos && mv -n istoreos/package/istoreos-files ./ && rm -rf istoreos
 git clone --depth 1 -b main https://github.com/sbwml/luci-app-alist && mv -n luci-app-alist/{luci-app-alist,alist} ./ && rm -rf luci-app-alist
 git clone --depth 1 -b v5 https://github.com/sbwml/luci-app-mosdns && mv -n luci-app-mosdns/{luci-app-mosdns,mosdns,v2dat} ./ && rm -rf luci-app-mosdns
