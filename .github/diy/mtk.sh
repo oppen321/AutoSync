@@ -20,6 +20,7 @@ git clone --depth 1 https://github.com/sirpdboy/luci-app-timecontrol
 git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus
 git clone --depth 1 https://github.com/sirpdboy/luci-app-parentcontrol
 git clone --depth 1 -b v5 https://github.com/sbwml/luci-app-mosdns && mv -n luci-app-mosdns/{luci-app-mosdns,mosdns,v2dat} ./ && rm -rf luci-app-mosdns
+git clone --depth 1 -b main https://github.com/sirpdboy/sirpdboy-package && mv -n sirpdboy-package/luci-app-wolplus ./ && rm -rf sirpdboy-package
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
