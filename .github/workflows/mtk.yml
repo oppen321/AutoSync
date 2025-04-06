@@ -1,4 +1,4 @@
-name: v24.10
+name: mtk
 
 on:
   push:
