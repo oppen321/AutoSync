@@ -45,7 +45,7 @@ git clone --depth 1 https://github.com/oppen321/nft-fullcone
 git clone --depth 1 https://github.com/oppen321/shortcut-fe
 git clone --depth 1 https://github.com/oppen321/package_new_natflow
 git clone --depth 1 https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic
-git clone --depth 1 https://github.com/oppen321/5G-Modem-Support && mv -n 5G-Modem-Support/{luci-app-hypermodem,luci-app-modem,quectel_cm_5G,quectel_MHI} ./ && rm -rf 5G-Modem-Support
+git clone --depth 1 https://github.com/oppen321/5G-Modem-Support && mv -n 5G-Modem-Support/{luci-app-hypermodem,luci-app-modem,quectel_cm_5G,quectel_MHI,fibocom_MHI} ./ && rm -rf 5G-Modem-Support
 git clone --depth 1 https://github.com/linkease/istore && mv -n istore/luci/{luci-app-store,luci-lib-taskd,luci-lib-xterm,taskd} ./ && rm -rf istore
 git clone --depth 1 https://github.com/linkease/nas-packages-luci && mv -n nas-packages-luci/luci/{luci-app-ddnsto,luci-app-floatip,luci-app-linkease,luci-app-quickstart} ./ && rm -rf nas-packages-luci
 git clone --depth 1 https://github.com/linkease/nas-packages && mv -n nas-packages/network/services/{ddnsto,floatip,linkease,quickstart,linkmount} ./ && rm -rf nas-packages
