@@ -20,7 +20,7 @@ git clone --depth 1 https://github.com/sirpdboy/luci-app-timecontrol
 git clone --depth 1 https://github.com/sirpdboy/luci-app-eqosplus
 git clone --depth 1 https://github.com/sirpdboy/luci-app-parentcontrol
 git clone --depth 1 https://github.com/oppen321/luci-app-adguardhome
-git clone --depth 1 https://github.com/immortalwrt/homeproxy
+git clone --depth 1 https://github.com/immortalwrt/homeproxy luci-app-homeproxy
 git clone --depth 1 https://github.com/nikkinikki-org/OpenWrt-nikki && mv -n OpenWrt-nikki/{luci-app-nikki,nikki} ./ && rm -rf OpenWrt-nikki
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall && mv -n openwrt-passwall/luci-app-passwall ./ && rm -rf openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 && mv -n openwrt-passwall2/luci-app-passwall2 ./ && rm -rf openwrt-passwall2
