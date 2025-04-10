@@ -22,7 +22,7 @@ git clone --depth 1 https://github.com/sirpdboy/luci-app-parentcontrol
 git clone --depth 1 https://github.com/oppen321/luci-app-adguardhome
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall && mv -n openwrt-passwall/luci-app-passwall ./ && rm -rf openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 && mv -n openwrt-passwall2/luci-app-passwall2 ./ && rm -rf openwrt-passwall2
-git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages && mv -n openwrt-passwall-packages/{chinadns-ng,dns2socks,geoview,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev
+git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages && mv -n openwrt-passwall-packages/{chinadns-ng,dns2socks,geoview,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,sing-box,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-core,v2ray-geodata,xray-plugin} ./ && rm -rf openwrt-passwall-packages
 git clone --depth 1 -b v5 https://github.com/sbwml/luci-app-mosdns && mv -n luci-app-mosdns/{luci-app-mosdns,mosdns,v2dat} ./ && rm -rf luci-app-mosdns
 git clone --depth 1 -b main https://github.com/sirpdboy/sirpdboy-package && mv -n sirpdboy-package/luci-app-wolplus ./ && rm -rf sirpdboy-package
 
